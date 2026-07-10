@@ -15,8 +15,13 @@ package lab;
  * ==========================================================================
  */
 public class Specs {
-
-    // TODO ข้อ 4: เขียน JavaDoc ให้เมธอดนี้
+    /**
+     * หาตำแหน่งแรกที่เจอ key ใน arr
+     * @param arr array ที่ใช้ในการค้นหา
+     * @param key คำที่ต้องการค้นหา
+     * @return ตำแหน่งที่เจอ ถ้าหาไม่เจอส่งค่าเป็น -1
+     * @throws IllegalArgumentExceotion เมื่อ arr เป็น null
+     */
     public static int firstIndexOf(int[] arr, int key) {
         if (arr == null) throw new IllegalArgumentException("arr must not be null");
         for (int i = 0; i < arr.length; i++)
@@ -26,9 +31,10 @@ public class Specs {
 
     // TODO ข้อ 5: เขียน JavaDoc ให้เมธอดนี้
     /**
-     * 
-     * @param radius
-     * @return
+     * คำนวณรัศมีวงกลม
+     * @param radius radius >= 0
+     * @return Math.PI * radius * radius
+     * @throws IllegalArgumentExceotion ถ้า radius >=n 0
      */
     public static double circleArea(double radius) {
         if (radius < 0) throw new IllegalArgumentException("radius must be >= 0");
@@ -36,6 +42,11 @@ public class Specs {
     }
 
     // TODO ข้อ 6: เขียน JavaDoc ให้เมธอดนี้
+    /**
+     * คัดช่องว่างหน้า-หลัง แล้วแปลงเป็นตัวพิมพ์เล็ก
+     * @param s ตัวอักษร
+     * @return s.trim().toLowerCase()
+     */
     //   (เมธอดนี้ตัดช่องว่างหน้า-หลัง แล้วแปลงเป็นตัวพิมพ์เล็ก;
     //    input null ให้คืน string ว่าง)
     public static String normalize(String s) {
